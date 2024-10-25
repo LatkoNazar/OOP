@@ -14,6 +14,12 @@ public class Item {
         this.quality = quality;
     }
 
+    public void decareaseQualityByOne() {
+        if (this.quality > 0) {
+            this.quality = this.quality - 1;
+        }
+    }
+
     public void increaseQualityByOne() {
         if (this.quality < 50) {
             this.quality = this.quality + 1;
