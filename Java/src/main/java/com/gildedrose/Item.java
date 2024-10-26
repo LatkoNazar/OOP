@@ -20,7 +20,6 @@ public class Item {
     public void setQuality(int quality) { this.quality = quality; }
     public String getName() { return name; }
 
-
     public void decreaseQualityByOne() {
         if (this.quality > 0) {
             setQuality(getQuality() - 1);
@@ -32,6 +31,15 @@ public class Item {
             setQuality(getQuality() + 1);
         }
     }
+
+    public void updateQuality() {
+        decreaseQualityByOne();
+        setSellIn(getSellIn() - 1);
+        if (getSellIn() < 0) {
+            decreaseQualityByOne();
+        }
+    }
+
    @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
