@@ -23,13 +23,13 @@ public class Item {
 
     public void decreaseQualityByOne() {
         if (this.quality > 0) {
-            this.setQuality(this.getQuality() - 1);
+            setQuality(getQuality() - 1);
         }
     }
 
     public void increaseQualityByOne() {
         if (this.quality < 50) {
-            this.setQuality(this.getQuality() + 1);
+            setQuality(getQuality() + 1);
         }
     }
    @Override
