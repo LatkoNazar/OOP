@@ -26,6 +26,7 @@ class GildedRose {
                     break;
                 default:
                     item.decreaseQualityByOne();
+                    break;
             }
 
             if (!item.getName().equals("Sulfuras, Hand of Ragnaros")) {
