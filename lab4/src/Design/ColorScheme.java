@@ -1,20 +1,13 @@
 package Design;
 
-public class ColorScheme {
+public class ColorScheme implements Design {
     private String color;
     public ColorScheme(String color) {
         this.color = color;
     }
 
-    public void applyColorScheme() {
-        System.out.println("Applying color scheme: " + color);
-    }
-
-    public String getColor() {
+    @Override
+    public String getData() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }
