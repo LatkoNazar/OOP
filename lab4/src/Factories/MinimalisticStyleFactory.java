@@ -1,5 +1,6 @@
 package Factories;
 
+import Products.ClassicStyleProducts.ClassicSofa;
 import Products.MinimalisticStyleProducts.MinimalisticChair;
 import Products.MinimalisticStyleProducts.MinimalisticSofa;
 import Products.Furniture;
@@ -14,5 +15,10 @@ public class MinimalisticStyleFactory implements StyleFactory{
     @Override
     public Furniture CreateSofa() {
         return new MinimalisticSofa();
+    }
+
+    @Override
+    public Furniture CreateTable() {
+        return new ClassicSofa();
     }
 }

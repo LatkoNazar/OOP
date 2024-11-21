@@ -1,13 +1,18 @@
 package Design;
 
+import java.util.Objects;
+
 public class Lighting implements Design{
-    private String lighting;
+    private final String lighting;
     public Lighting(String lighting) {
         this.lighting = lighting;
     }
 
     @Override
-    public String getData() {
-        return lighting;
+    public void describe() {
+        System.out.println("Lighting: ");
+        System.out.println("---------------------");
+        System.out.println(Objects.requireNonNullElse(lighting, "No found."));
+        System.out.println("---------------------\n");
     }
 }

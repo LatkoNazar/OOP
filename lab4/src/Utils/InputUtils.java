@@ -3,19 +3,19 @@ package Utils;
 import java.util.Scanner;
 
 public class InputUtils {
-    private static Scanner scanner = new Scanner(System.in);
+    private final static Scanner scanner = new Scanner(System.in);
 
     public static int readInt(String prompt) {
         int value;
         while (true) {
-            System.out.print(prompt); // Вивести підказку
+            System.out.print(prompt);
             if (scanner.hasNextInt()) {
-                value = scanner.nextInt(); // Зчитати число
-                scanner.nextLine(); // Очистити залишки буфера
-                return value; // Повернути результат
+                value = scanner.nextInt();
+                scanner.nextLine();
+                return value;
             } else {
                 System.out.println("Invalid input. Please enter an integer.");
-                scanner.nextLine(); // Очистити некоректний ввід
+                scanner.nextLine();
             }
         }
     }
@@ -23,9 +23,9 @@ public class InputUtils {
     public static String readString(String prompt) {
         String value;
         while (true) {
-            System.out.print(prompt); // Вивести підказку
-            value = scanner.nextLine(); // Зчитати рядок
-            if (!value.isBlank()) { // Перевірити, чи рядок не порожній
+            System.out.print(prompt);
+            value = scanner.nextLine();
+            if (!value.isBlank()) {
                 return value;
             } else {
                 System.out.println("Invalid input. Please enter a non-empty string.");

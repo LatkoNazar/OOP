@@ -14,4 +14,9 @@ public class ClasicStyleFactory implements StyleFactory{
     public Furniture CreateSofa() {
         return new ClassicSofa();
     }
+
+    @Override
+    public Furniture CreateTable() {
+        return new ClassicSofa();
+    }
 }
