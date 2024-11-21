@@ -9,10 +9,7 @@ public class Lighting implements Design{
     }
 
     @Override
-    public void describe() {
-        System.out.println("Lighting: ");
-        System.out.println("---------------------");
-        System.out.println(Objects.requireNonNullElse(lighting, "No found."));
-        System.out.println("---------------------\n");
+    public String describe() {
+        return lighting;
     }
 }

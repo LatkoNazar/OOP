@@ -2,7 +2,7 @@ package Services;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import Design.Design;
 import Design.Lighting;
 import Design.ColorScheme;
 import Design.FurnitureLayout;
@@ -60,7 +60,7 @@ public class InteriorDesigner {
         System.out.println("Furniture list:");
         System.out.println("---------------------");
         if (FurnitureList.isEmpty()){
-            System.out.println("No furniture found.");
+            System.out.println("No furniture found. please add new!!!");
         }
         else {
             for (Furniture furniture : FurnitureList) {
@@ -70,11 +70,21 @@ public class InteriorDesigner {
         System.out.println("---------------------\n");
     }
 
+    public void describeDesign(Design feature, String message) {
+        System.out.println(message + ": ");
+        System.out.println("---------------------");
+        if (feature == null) {
+            System.out.println("No found. Should add!!!");
+        } else {
+            System.out.println(feature.describe());
+        }
+        System.out.println("---------------------\n");
+    }
 
     public void describeInterior() {
         describeFurnitureList();
-        lighting.describe();
-        colorScheme.describe();
-        furnitureLayout.describe();
+        describeDesign(lighting, "Lightning");
+        describeDesign(colorScheme, "ColorScheme");
+        describeDesign(furnitureLayout, "Furniture layout");
     }
 }

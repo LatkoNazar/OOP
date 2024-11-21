@@ -9,10 +9,7 @@ public class ColorScheme implements Design {
     }
 
     @Override
-    public void describe() {
-        System.out.println("Scheme color: ");
-        System.out.println("---------------------");
-        System.out.println(Objects.requireNonNullElse(color, "No found."));
-        System.out.println("---------------------\n");
+    public String describe() {
+        return color;
     }
 }

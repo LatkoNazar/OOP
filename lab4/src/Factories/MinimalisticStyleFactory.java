@@ -5,6 +5,7 @@ import Products.MinimalisticStyleProducts.MinimalisticChair;
 import Products.MinimalisticStyleProducts.MinimalisticSofa;
 import Products.Furniture;
 import Products.MinimalisticStyleProducts.MinimalisticChair;
+import Products.MinimalisticStyleProducts.MinimalisticTable;
 
 public class MinimalisticStyleFactory implements StyleFactory{
     @Override
@@ -19,6 +20,6 @@ public class MinimalisticStyleFactory implements StyleFactory{
 
     @Override
     public Furniture CreateTable() {
-        return new ClassicSofa();
+        return new MinimalisticTable();
     }
 }

@@ -2,6 +2,7 @@ package Factories;
 
 import Products.ClassicStyleProducts.ClassicChair;
 import Products.ClassicStyleProducts.ClassicSofa;
+import Products.ClassicStyleProducts.ClassicTable;
 import Products.Furniture;
 
 public class ClasicStyleFactory implements StyleFactory{
@@ -17,6 +18,6 @@ public class ClasicStyleFactory implements StyleFactory{
 
     @Override
     public Furniture CreateTable() {
-        return new ClassicSofa();
+        return new ClassicTable();
     }
 }

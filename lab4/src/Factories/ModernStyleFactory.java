@@ -18,6 +18,6 @@ public class ModernStyleFactory implements StyleFactory{
 
     @Override
     public Furniture CreateTable() {
-        return new ClassicSofa();
+        return new ModernSofa();
     }
 }
