@@ -4,6 +4,7 @@ import Products.ClassicStyleProducts.ClassicSofa;
 import Products.Furniture;
 import Products.ModernStyleProducts.ModernChair;
 import Products.ModernStyleProducts.ModernSofa;
+import Products.ModernStyleProducts.ModernTable;
 
 public class ModernStyleFactory implements StyleFactory{
     @Override
@@ -18,6 +19,6 @@ public class ModernStyleFactory implements StyleFactory{
 
     @Override
     public Furniture CreateTable() {
-        return new ModernSofa();
+        return new ModernTable();
     }
 }

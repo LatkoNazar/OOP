@@ -1,10 +1,8 @@
 package Products.MinimalisticStyleProducts;
+import Products.AbstractFurniture;
 
-import Products.Furniture;
-
-public class MinimalisticSofa implements Furniture {
-    @Override
-    public void describe() {
-        System.out.println("Minimalistic Sofa");
+public class MinimalisticSofa extends AbstractFurniture {
+    public MinimalisticSofa() {
+        super("Minimalistic Sofa", 70);
     }
 }

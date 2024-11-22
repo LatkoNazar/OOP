@@ -1,10 +1,9 @@
 package Products.ModernStyleProducts;
 
-import Products.Furniture;
+import Products.AbstractFurniture;
 
-public class ModernSofa implements Furniture {
-    @Override
-    public void describe() {
-        System.out.println("Modern Sofa");
+public class ModernSofa extends AbstractFurniture {
+    public ModernSofa() {
+        super("Modern Sofa", 110);
     }
 }

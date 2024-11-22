@@ -1,10 +1,8 @@
 package Products.ClassicStyleProducts;
+import Products.AbstractFurniture;
 
-import Products.Furniture;
-
-public class ClassicSofa implements Furniture {
-    @Override
-    public void describe() {
-        System.out.println("Classic Sofa");
+public class ClassicSofa extends AbstractFurniture {
+    public ClassicSofa() {
+        super("Classic Sofa", 90);
     }
 }

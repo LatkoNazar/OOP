@@ -1,10 +1,8 @@
 package Products.ModernStyleProducts;
+import Products.AbstractFurniture;
 
-import Products.Furniture;
-
-public class ModernTable implements Furniture {
-    @Override
-    public void describe() {
-        System.out.println("Modern Table");
+public class ModernTable extends AbstractFurniture {
+    public ModernTable() {
+        super("Modern Table", 112.50);
     }
 }
