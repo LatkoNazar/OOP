@@ -8,7 +8,7 @@ import Design.ColorScheme;
 import Design.FurnitureLayout;
 import Factories.StyleFactory;
 import Products.Furniture;
-import Utils.InputUtils;
+import Utils.UserInteractions;
 
 public class InteriorDesigner {
     private final StyleFactory styleFactory;
@@ -17,44 +17,34 @@ public class InteriorDesigner {
     private ColorScheme colorScheme;
     private FurnitureLayout furnitureLayout;
 
+    UserInteractions userInteractions = new UserInteractions();
 
     public InteriorDesigner(StyleFactory styleFactory) {
         this.styleFactory = styleFactory;
     }
 
+
     public void addFurniture() {
-        Furniture furniture = chooseFurniture();
+        String furnitureType = userInteractions.chooseTypeFurniture();
+        Furniture furniture = userInteractions.chooseFurniture(furnitureType, styleFactory);
         FurnitureList.add(furniture);
     }
+
 
     public void addColorScheme(ColorScheme colorScheme) {
         this.colorScheme = colorScheme;
     }
 
+
     public void addFurnitureLayout(FurnitureLayout furnitureLayout) {
         this.furnitureLayout = furnitureLayout;
     }
+
 
     public void addLighting(Lighting lighting) {
         this.lighting = lighting;
     }
 
-    public Furniture chooseFurniture() {
-        Furniture furniture;
-        while (true) {
-            System.out.println("Choose a furniture (1 - Chair, 2 - Sofa, 3 - Table): ");
-            int styleChoice = InputUtils.readInt("Enter a number: ");
-            furniture = switch (styleChoice) {
-                case 1 -> styleFactory.CreateChair();
-                case 2 -> styleFactory.CreateSofa();
-                case 3 -> styleFactory.CreateTable();
-                default -> null;
-            };
-            if (furniture != null) {break;}
-            System.out.println("Invalid choice!");
-        }
-        return furniture;
-    }
 
     public void describeFurnitureList() {
         System.out.println("Furniture list:");
@@ -70,6 +60,7 @@ public class InteriorDesigner {
         System.out.println("---------------------\n");
     }
 
+
     public void describeDesign(Design feature, String message) {
         System.out.println(message + ": ");
         System.out.println("---------------------");
@@ -80,6 +71,7 @@ public class InteriorDesigner {
         }
         System.out.println("---------------------\n");
     }
+
 
     public void describeInterior() {
         describeFurnitureList();

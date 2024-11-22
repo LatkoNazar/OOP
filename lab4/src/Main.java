@@ -1,7 +1,7 @@
 import Design.ColorScheme;
 import Design.FurnitureLayout;
 import Design.Lighting;
-import Factories.ClasicStyleFactory;
+import Factories.ClassicStyleFactory;
 import Factories.MinimalisticStyleFactory;
 import Factories.ModernStyleFactory;
 import Factories.StyleFactory;
@@ -16,7 +16,7 @@ public class Main {
             int styleChoice = InputUtils.readInt("Enter a number: ");
             StyleFactory factory = switch (styleChoice) {
                 case 1 -> new ModernStyleFactory();
-                case 2 -> new ClasicStyleFactory();
+                case 2 -> new ClassicStyleFactory();
                 case 3 -> new MinimalisticStyleFactory();
                 default -> null;
             };

@@ -2,7 +2,7 @@ package Products.ModernStyleProducts;
 import Products.AbstractFurniture;
 
 public class ModernTable extends AbstractFurniture {
-    public ModernTable() {
-        super("Modern Table", 112.50);
+    public ModernTable(String name, double price) {
+        super(name, price);
     }
 }

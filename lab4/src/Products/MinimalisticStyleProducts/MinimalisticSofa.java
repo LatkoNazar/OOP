@@ -2,7 +2,7 @@ package Products.MinimalisticStyleProducts;
 import Products.AbstractFurniture;
 
 public class MinimalisticSofa extends AbstractFurniture {
-    public MinimalisticSofa() {
-        super("Minimalistic Sofa", 70);
+    public MinimalisticSofa(String name, double price) {
+        super(name, price);
     }
 }

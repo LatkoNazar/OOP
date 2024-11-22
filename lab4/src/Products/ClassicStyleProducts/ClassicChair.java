@@ -2,7 +2,7 @@ package Products.ClassicStyleProducts;
 import Products.AbstractFurniture;
 
 public class ClassicChair extends AbstractFurniture {
-    public ClassicChair() {
-        super("Classic Chair", 70);
+    public ClassicChair(String name, double price) {
+        super(name, price);
     }
 }
