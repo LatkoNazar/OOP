@@ -1,13 +1,10 @@
 package Factories;
 
-import Products.ClassicStyleProducts.ClassicSofa;
 import Products.FurnitureData;
 import Products.MinimalisticStyleProducts.MinimalisticChair;
 import Products.MinimalisticStyleProducts.MinimalisticSofa;
 import Products.Furniture;
-import Products.MinimalisticStyleProducts.MinimalisticChair;
 import Products.MinimalisticStyleProducts.MinimalisticTable;
-
 import java.util.List;
 
 public class MinimalisticStyleFactory implements StyleFactory{

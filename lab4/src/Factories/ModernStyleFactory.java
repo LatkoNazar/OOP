@@ -1,12 +1,10 @@
 package Factories;
 
-import Products.ClassicStyleProducts.ClassicSofa;
 import Products.Furniture;
 import Products.FurnitureData;
 import Products.ModernStyleProducts.ModernChair;
 import Products.ModernStyleProducts.ModernSofa;
 import Products.ModernStyleProducts.ModernTable;
-
 import java.util.List;
 
 public class ModernStyleFactory implements StyleFactory{

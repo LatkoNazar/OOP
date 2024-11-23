@@ -19,17 +19,4 @@ public class InputUtils {
             }
         }
     }
-
-    public static String readString(String prompt) {
-        String value;
-        while (true) {
-            System.out.print(prompt);
-            value = scanner.nextLine();
-            if (!value.isBlank()) {
-                return value;
-            } else {
-                System.out.println("Invalid input. Please enter a non-empty string.");
-            }
-        }
-    }
 }

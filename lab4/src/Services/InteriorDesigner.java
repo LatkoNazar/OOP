@@ -23,28 +23,23 @@ public class InteriorDesigner {
         this.styleFactory = styleFactory;
     }
 
-
     public void addFurniture() {
         String furnitureType = userInteractions.chooseTypeFurniture();
         Furniture furniture = userInteractions.chooseFurniture(furnitureType, styleFactory);
         FurnitureList.add(furniture);
     }
 
-
-    public void addColorScheme(ColorScheme colorScheme) {
-        this.colorScheme = colorScheme;
+    public void addColorScheme() {
+        this.colorScheme = userInteractions.chooseColorScheme();
     }
 
-
-    public void addFurnitureLayout(FurnitureLayout furnitureLayout) {
-        this.furnitureLayout = furnitureLayout;
+    public void addFurnitureLayout() {
+        this.furnitureLayout = userInteractions.chooseFurnitureLayout();
     }
 
-
-    public void addLighting(Lighting lighting) {
-        this.lighting = lighting;
+    public void addLighting() {
+        this.lighting = userInteractions.chooseLighting();
     }
-
 
     public void describeFurnitureList() {
         System.out.println("Furniture list:");
@@ -60,7 +55,6 @@ public class InteriorDesigner {
         System.out.println("---------------------\n");
     }
 
-
     public void describeDesign(Design feature, String message) {
         System.out.println(message + ": ");
         System.out.println("---------------------");
@@ -71,7 +65,6 @@ public class InteriorDesigner {
         }
         System.out.println("---------------------\n");
     }
-
 
     public void describeInterior() {
         describeFurnitureList();

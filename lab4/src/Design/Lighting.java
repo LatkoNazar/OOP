@@ -1,15 +1,16 @@
 package Design;
 
-import java.util.Objects;
-
 public class Lighting implements Design{
     private final String lighting;
-    public Lighting(String lighting) {
+    private final double price;
+
+    public Lighting(String lighting, double price) {
         this.lighting = lighting;
+        this.price = price;
     }
 
     @Override
     public String describe() {
-        return lighting;
+        return lighting + ". Price: " + price;
     }
 }

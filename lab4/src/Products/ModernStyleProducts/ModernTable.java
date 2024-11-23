@@ -1,4 +1,5 @@
 package Products.ModernStyleProducts;
+
 import Products.AbstractFurniture;
 
 public class ModernTable extends AbstractFurniture {

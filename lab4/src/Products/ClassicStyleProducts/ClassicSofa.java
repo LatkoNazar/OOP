@@ -1,4 +1,5 @@
 package Products.ClassicStyleProducts;
+
 import Products.AbstractFurniture;
 
 public class ClassicSofa extends AbstractFurniture {

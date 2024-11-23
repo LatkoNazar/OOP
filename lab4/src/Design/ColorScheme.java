@@ -1,15 +1,16 @@
 package Design;
 
-import java.util.Objects;
-
 public class ColorScheme implements Design {
     private final String color;
-    public ColorScheme(String color) {
+    private final double price;
+
+    public ColorScheme(String color, double price) {
         this.color = color;
+        this.price = price;
     }
 
     @Override
     public String describe() {
-        return color;
+        return color + ". Price: " + price;
     }
 }
