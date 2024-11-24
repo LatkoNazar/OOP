@@ -8,21 +8,21 @@ import Products.ModernStyleProducts.ModernTable;
 import java.util.List;
 
 public class ModernStyleFactory implements StyleFactory{
-    public List<FurnitureData> ChairList = List.of(
+    private final List<FurnitureData> ChairList = List.of(
             new FurnitureData("Modern Chair Smooth", 70),
             new FurnitureData("Modern chair PRO", 122),
             new FurnitureData("Gaming Chair", 124.44),
             new FurnitureData("Default modern chair", 80)
     );
 
-    public List<FurnitureData> SofaList = List.of(
+    private final List<FurnitureData> SofaList = List.of(
             new FurnitureData("Modern black sofa", 122),
             new FurnitureData("4 Seater Sofa", 144.50),
             new FurnitureData("Comfort Sofa", 190),
             new FurnitureData("Default modern sofa", 110)
     );
 
-    public List<FurnitureData> TableList = List.of(
+    private final List<FurnitureData> TableList = List.of(
             new FurnitureData("Modern Blue Table", 150),
             new FurnitureData("Gaming & Study Table", 133.33),
             new FurnitureData("Modern white table", 114),

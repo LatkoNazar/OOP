@@ -8,21 +8,21 @@ import Products.ClassicStyleProducts.ClassicTable;
 import Products.Furniture;
 
 public class ClassicStyleFactory implements StyleFactory{
-    public List<FurnitureData> ChairList = List.of(
+    private final List<FurnitureData> ChairList = List.of(
             new FurnitureData("Minerva chair", 150),
             new FurnitureData("Solid Wood Dining Chair Retro", 130),
             new FurnitureData("Marco Chair", 125.50),
             new FurnitureData("Default classic chair", 100)
     );
 
-    public List<FurnitureData> SofaList = List.of(
+    private final List<FurnitureData> SofaList = List.of(
             new FurnitureData("Classic violet sofa", 180),
             new FurnitureData("Ralles Classic Sofa", 165.00),
             new FurnitureData("Luxury Classic Sofa", 300),
             new FurnitureData("Default classic sofa", 120)
     );
 
-    public List<FurnitureData> TableList = List.of(
+    private final List<FurnitureData> TableList = List.of(
             new FurnitureData("Classic wooden table", 160),
             new FurnitureData("Rectangular wooden table", 140.33),
             new FurnitureData("Classic Game Table", 110),
