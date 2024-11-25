@@ -11,6 +11,7 @@ import Products.Furniture;
 import Utils.UserInteractions;
 
 public class InteriorDesigner {
+    double totalPrice = 0;
     private final StyleFactory styleFactory;
     private final List<Furniture> FurnitureList = new ArrayList<>();
     private Lighting lighting;
@@ -65,11 +66,21 @@ public class InteriorDesigner {
         }
         System.out.println("---------------------\n");
     }
+    public void describeTotalPrice() {
+        if (lighting != null) { totalPrice = totalPrice + lighting.getPrice();}
+        if (colorScheme != null) {totalPrice = totalPrice + colorScheme.getPrice();}
+        for (Furniture furniture : FurnitureList) {
+            totalPrice = totalPrice + furniture.getPrice();
+        }
+        System.out.println("Total price: " + totalPrice);
+        System.out.println("\n");
+    }
 
     public void describeInterior() {
         describeFurnitureList();
         describeDesign(lighting, "Lightning");
         describeDesign(colorScheme, "ColorScheme");
         describeDesign(furnitureLayout, "Furniture layout");
+        describeTotalPrice();
     }
 }

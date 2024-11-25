@@ -109,11 +109,11 @@ public class UserInteractions {
         Lighting lighting = null;
         while (true) {
             System.out.println("Choose lighting:\n" +
-                    "1 - General\n" +
-                    "2 - Ambient\n" +
-                    "3 - Mood\n" +
-                    "4 - Task\n" +
-                    "5 - Accent");
+                    "1 - General. Price - 40\n" +
+                    "2 - Ambient. Ambient - 60\n" +
+                    "3 - Mood. Price - 75\n" +
+                    "4 - Task. Price - 50\n" +
+                    "5 - Accent. Price - 80");
             int choice = InputUtils.readInt("Enter a number: ");
             if (choice >=1 && choice <=5) {
                 switch (choice) {
@@ -135,11 +135,11 @@ public class UserInteractions {
         ColorScheme colorScheme = null;
         while (true) {
             System.out.println("Choose color scheme:\n" +
-                    "1 - Monochrome - Black, White, Gray\n" +
-                    "2 - Earth Tones - Brown, Beige, Olive Green, Terracotta\n" +
-                    "3 - Bright Contrast - Red, Yellow, Blue, White\n" +
-                    "4 - Pastel Palette - Baby Pink, Mint Green, Lavender, Soft Peach\n" +
-                    "5 - Neutral Warmth - Cream, Taupe, Light Gray, Soft Gold");
+                    "1 - Monochrome - Black, White, Gray. Price - 40\n" +
+                    "2 - Earth Tones - Brown, Beige, Olive Green, Terracotta. Price - 60\n" +
+                    "3 - Bright Contrast - Red, Yellow, Blue, White. Price - 75\n" +
+                    "4 - Pastel Palette - Baby Pink, Mint Green, Lavender, Soft Peach. Price - 50\n" +
+                    "5 - Neutral Warmth - Cream, Taupe, Light Gray, Soft Gold. Price - 80");
             int choice = InputUtils.readInt("Enter a number: ");
             if (choice >=1 && choice <=5) {
                 switch (choice) {

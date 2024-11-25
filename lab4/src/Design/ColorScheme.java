@@ -13,4 +13,8 @@ public class ColorScheme implements Design {
     public String describe() {
         return color + ". Price: " + price;
     }
+
+    public double getPrice() {
+        return price;
+    }
 }

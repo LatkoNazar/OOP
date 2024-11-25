@@ -13,4 +13,8 @@ public class Lighting implements Design{
     public String describe() {
         return lighting + ". Price: " + price;
     }
+
+    public double getPrice() {
+        return price;
+    }
 }

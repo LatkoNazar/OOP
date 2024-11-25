@@ -13,4 +13,8 @@ public class AbstractFurniture implements Furniture {
     public void describe() {
         System.out.println("Name: " + name + ". Price: " + price);
     }
+
+    public double getPrice() {
+        return price;
+    }
 }
