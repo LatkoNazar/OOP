@@ -7,7 +7,7 @@ public class Main {
         Parent mother = new Parent("Jane");
         Parent father = new Parent("Cole");
         Child child = new Child("Bob");
-        TaskController controller = new TaskController(List.of(new Cleaning(), new Cooking(), new KidsEducation()),
+        TaskController controller = new TaskController(List.of(new Cleaning(), new Cooking(), new KidsEducation(), new WashDishes()),
                 List.of(mother, father, child));
         controller.distributeTasks();
     }
