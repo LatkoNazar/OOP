@@ -11,8 +11,15 @@ public class StripeAdapter implements PaymentProcessor {
     }
 
     @Override
-    public void processPayment(double amount) {
-        StripeAPI.makeStripePayment(amount);
+    public boolean processPayment(double amount, double balance) {
+        if (balance < amount) {
+            System.out.println("You do not have enough money!");
+            return false;
+        }
+        else {
+            StripeAPI.makeStripePayment(amount);
+            return true;
+        }
     }
 
     @Override

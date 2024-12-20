@@ -11,8 +11,15 @@ public class MonobankAdapter implements PaymentProcessor {
     }
 
     @Override
-    public void processPayment(double amount) {
-        MonobankAPI.transfer(amount);
+    public boolean processPayment(double amount, double balance) {
+        if (balance < amount) {
+            System.out.println("You do not have enough money!");
+            return false;
+        }
+        else {
+            MonobankAPI.transfer(amount);
+            return true;
+        }
     }
 
     @Override

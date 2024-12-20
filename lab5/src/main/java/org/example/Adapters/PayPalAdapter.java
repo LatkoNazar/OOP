@@ -11,8 +11,15 @@ public  class PayPalAdapter implements PaymentProcessor {
     }
 
     @Override
-    public void processPayment(double amount) {
-        PayPalAPI.payWithPayPal(amount);
+    public boolean processPayment(double amount, double balance) {
+        if (balance < amount) {
+            System.out.println("You do not have enough money!");
+            return false;
+        }
+        else {
+            PayPalAPI.payWithPayPal(amount);
+            return true;
+        }
     }
 
     @Override

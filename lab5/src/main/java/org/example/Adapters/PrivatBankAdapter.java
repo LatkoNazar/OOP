@@ -11,8 +11,15 @@ public class PrivatBankAdapter implements PaymentProcessor {
     }
 
     @Override
-    public void processPayment(double amount) {
-        PrivatBankAPI.transfer(amount);
+    public boolean processPayment(double amount, double balance) {
+        if (balance < amount) {
+            System.out.println("You do not have enough money!");
+            return false;
+        }
+        else {
+            PrivatBankAPI.transfer(amount);
+            return true;
+        }
     }
 
     @Override
