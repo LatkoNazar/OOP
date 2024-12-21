@@ -13,6 +13,6 @@ public class StripeAPI {
     }
 
     public void makeStripePayment(double amount) {
-        System.out.println("Paid " + amount + " via Stripe.");
+        System.out.printf("Paid %.2fUAH via Stripe.\n", amount);
     }
 }

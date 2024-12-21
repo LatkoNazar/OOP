@@ -18,7 +18,6 @@ public class UserInteractions {
 
     public UserInteractions(User user) {
         this.user = user;
-
         MonobankAPI = new MonobankAPI(user);
         PayPalAPI = new PayPalAPI(user);
         PrivatBankAPI = new PrivatBankAPI(user);
@@ -102,5 +101,4 @@ public class UserInteractions {
             System.out.println("Invalid choice! Try again");
         }
     }
-
 }

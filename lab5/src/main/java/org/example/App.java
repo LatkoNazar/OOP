@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.Adapters.*;
 import org.example.Functions.*;
+
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class App {
@@ -17,7 +19,7 @@ public class App {
             new Item("Bananas (1 kg)", 1.50, "EUR"));
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         User user = new User(150, 270, 300, 2);
         UserInteractions ui = new UserInteractions(user);
         UserInteractions.PurchaseInfo(Cart);
@@ -26,14 +28,18 @@ public class App {
             PaymentProcessor processor = ui.choosePaymentProcessor();
             ui.showPurchase(Cart, processor);
             double balance = ui.convertCurrencyToUAH(processor.getBalance(), "USD");
-
             System.out.println();
             System.out.println("Your balance: " + balance + " UAH");
+            System.out.println();
             int toPay = ui.toPay();
             switch (toPay) {
                 case 1: {
                     boolean success = processor.processPayment(ui.getTotal(Cart, processor), balance);
-                    if (success) System.exit(0);
+                    if (success) {
+                        PDFCreator pdf = new PDFCreator("Hello world, Nazar");
+                        pdf.createPDF(Cart);
+                        System.exit(0);
+                    }
                     else break;
                 }
                 case 2: {

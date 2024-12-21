@@ -13,6 +13,6 @@ public class PrivatBankAPI {
     }
 
     public void transfer(double amount) {
-        System.out.println("Transferred " + amount + " via PrivatBank.");
+        System.out.printf("Paid %.2fUAH via PrivatBank.\n", amount);
     }
 }

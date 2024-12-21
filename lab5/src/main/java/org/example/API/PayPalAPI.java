@@ -12,6 +12,6 @@ public class PayPalAPI {
     }
 
     public void payWithPayPal(double amount) {
-        System.out.println("Paid " + amount + " via PayPal.");
+        System.out.printf("Paid %.2fUAH via PayPal.\n", amount);
     }
 }

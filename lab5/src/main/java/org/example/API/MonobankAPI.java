@@ -13,6 +13,6 @@ public class MonobankAPI {
     }
 
     public void transfer(double amount) {
-        System.out.println("Transferred " + amount + " via Monobank.");
+        System.out.printf("Paid %.2fUAH via Monobank.\n", amount);
     }
 }
