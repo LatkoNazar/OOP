@@ -16,11 +16,12 @@ public class App {
             new Item("Rice (1 kg)", 2.00, "EUR"),
             new Item("Pasta (500 g)", 1.20, "USD"),
             new Item("Apples (1 kg)", 2.00, "USD"),
-            new Item("Bananas (1 kg)", 1.50, "EUR"));
+            new Item("Bananas (1 kg)", 1.50, "EUR"),
+            new Item("Candies (1 kg)", 3.50, "USD"));
 
 
     public static void main(String[] args) throws FileNotFoundException {
-        User user = new User(150, 270, 300, 2);
+        User user = new User(150, 270, 300, 300);
         UserInteractions ui = new UserInteractions(user);
         UserInteractions.PurchaseInfo(Cart);
 

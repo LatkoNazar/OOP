@@ -7,9 +7,9 @@ public class User {
     private double MonobankBalance;
 
     public User(double PayPalBalance,
-                    double StripeBalance,
-                    double PrivatBankBalance,
-                    double MonobankBalance) {
+                double StripeBalance,
+                double PrivatBankBalance,
+                double MonobankBalance) {
         this.PayPalBalance = PayPalBalance;
         this.StripeBalance = StripeBalance;
         this.PrivatBankBalance = PrivatBankBalance;

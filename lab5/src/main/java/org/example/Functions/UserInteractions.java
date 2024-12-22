@@ -7,7 +7,6 @@ import org.example.Strategies.Conversion.ConversionToUAH;
 import org.example.User;
 import java.util.List;
 
-
 public class UserInteractions {
     User user;
 
